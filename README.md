@@ -1,9 +1,10 @@
 # PDF Combinator
 Small tool to combine scanned duplex files from two files into one.<br>
-The second file also gets reversed
+The second file also gets reversed.
 
 ## Requirements
-A Python Install.
+A Python install.<br>
+Download python [here](https://www.python.org/downloads/)
 
 ## Install
 Clone this repo, install the required packages using
