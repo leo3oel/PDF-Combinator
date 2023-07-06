@@ -2,7 +2,7 @@
 
 set "script_folder=%~dp0"
 set "target_file=pdfCombinator.pyw"
-set "shortcut_name=pdfCombinator"
+set "shortcut_name=pdfCombinator.lnk"
 set "programFolder=C:\ProgramData\Microsoft\Windows\Start Menu\Programs"
 
 set "shortcut_path=%script_folder%%shortcut_name%"
