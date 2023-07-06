@@ -82,6 +82,7 @@ class MainWin(tk.Tk):
         pdfCombinator = PdfCombinator(self.__firstPdfFilename, self.__secondPdfFilename, self.__outputPdfFilename)
         pdfCombinator.outputPdf()
         webbrowser.open_new("file://" + self.__outputPdfFilename)
+        self.quit()
 
 if __name__ == "__main__":
     
