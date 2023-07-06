@@ -7,6 +7,16 @@ A Python install.<br>
 Download python [here](https://www.python.org/downloads/)
 
 ## Install
+There are two ways to use this PDF Combinator:
+
+ 1. Download the pdfCombinator.exe (not necessarily up-to-date)
+ 2. Clone this repo and use python Script (up-to-date)
+
+### Exe
+ 1. Click on `pdfCombinator.exe` and download it.
+ 2. Execute `.exe`
+
+### Python file
 Clone this repo, install the required packages using
 ```
 pip install -r packages.txt
