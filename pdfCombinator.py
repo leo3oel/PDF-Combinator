@@ -22,19 +22,16 @@ class PdfCombinator():
     def outputPdf(self):
         outputPdf = PdfWriter()
         outputPdf = self.__addPages(outputPdf)
-        outputPdf = self.__addExtraPagesOfSecondPdf(outputPdf)
         outputPdf.write(self.__outFilename)
 
     def __addPages(self, outputPdf):
-        for index in range(len(self.__firstPDF.pages)):
-            outputPdf.add_page(self.__firstPDF.pages[index])
-            outputPdf.add_page(self.__secondPDF.pages[index])
-        return outputPdf
-    
-    def __addExtraPagesOfSecondPdf(self, outputPdf):
-        if len(self.__firstPDF.pages) < len(self.__secondPDF.pages):
-            for index in range(len(self.__firstPDF.pages), len(self.__secondPDF.pages)):
-                outputPdf.add_page(self.__secondPDF.pages[index])
+        pdfLength = len(self.__firstPDF.pages)
+        if pdfLength != len(self.__secondPDF.pages):
+            msgbox.showerror("Dateien sind unterschiedlich lang", "Bitte zwei gleichlange PDFs einfügen")
+        for index in range(pdfLength):
+            reversedIndex = pdfLength-index-1
+            outputPdf.add_page(self.__firstPDF.pages[index])                
+            outputPdf.add_page(self.__secondPDF.pages[reversedIndex])
         return outputPdf
 
 
