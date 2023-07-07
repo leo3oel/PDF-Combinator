@@ -2,7 +2,6 @@ from pypdf import PdfReader, PdfWriter
 import tkinter as tk
 from tkinter import filedialog
 import tkinter.messagebox as msgbox
-import webbrowser
 
 class PdfCombinator():
 
@@ -81,7 +80,6 @@ class MainWin(tk.Tk):
     def __makePdf(self):
         pdfCombinator = PdfCombinator(self.__firstPdfFilename, self.__secondPdfFilename, self.__outputPdfFilename)
         pdfCombinator.outputPdf()
-        webbrowser.open_new("file://" + self.__outputPdfFilename)
         self.quit()
 
 if __name__ == "__main__":
