@@ -13,7 +13,7 @@ There are two ways to use this PDF Combinator:
  2. Clone this repo and use python Script (up-to-date)
 
 ### Exe
- 1. Click on `pdfCombinator.exe` and download it.
+ 1. Download `pdfCombinator.exe` from releases
  2. Execute `.exe`
 
 ### Python file
