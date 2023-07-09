@@ -2,19 +2,17 @@
 Small tool to combine scanned duplex files from two files into one.<br>
 The second file also gets reversed.
 
-## Requirements
-A Python install.<br>
-Download python [here](https://www.python.org/downloads/)
-
 ## Install
 There are two ways to use this PDF Combinator:
 
- 1. Download the pdfCombinator.exe (not necessarily up-to-date)
+ 1. Download the latest Release (not necessarily up-to-date)
  2. Clone this repo and use python Script (up-to-date)
 
-### Exe
- 1. Download `pdfCombinator.exe` from releases
- 2. Execute `.exe`
+### Latest Release
+There are two types of releases:
+ 
+ 1. PDF Combinator with a selection using a gui
+ 2. PDF Combinator which combines the first two PDFs int the current directory (Tag starting with **noselection_**)
 
 ### Python file
 Clone this repo, install the required packages using
@@ -26,4 +24,6 @@ or the `installPackages.bat` executable.
 If required a shortcut can be added to the start menu using `makeShortcut_RUNASADMIN.bat`.
 
 ## Usage
-Run `pdfCombinator.pyw` and select the two duplex side, then specify the output location.
+Run `pdfCombinator.py` and select the two duplex side, then specify the output location.
+
+Or run `combinePdfsInFolder.py` to combine the first two PDFs in the current working directory
