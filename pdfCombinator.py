@@ -1,5 +1,6 @@
 from pypdf import PdfReader, PdfWriter
 import tkinter as tk
+import os
 from tkinter import filedialog
 import tkinter.messagebox as msgbox
 
@@ -84,4 +85,13 @@ class MainWin(tk.Tk):
 
 if __name__ == "__main__":
     
-    MainWin()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--combine', dest="filenames", nargs='+')
+    argv = parser.parse_args()
+    
+    if argv.filenames:
+        pdfCombinator = PdfCombinator(argv.filenames[0], argv.filenames[1], os.path.dirname(argv.filenames[0]))
+        pdfCombinator.outputPdf()
+    else: 
+        MainWin()
