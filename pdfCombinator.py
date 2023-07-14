@@ -91,7 +91,7 @@ if __name__ == "__main__":
     argv = parser.parse_args()
     
     if argv.filenames:
-        pdfCombinator = PdfCombinator(argv.filenames[0], argv.filenames[1], os.path.dirname(argv.filenames[0]))
+        pdfCombinator = PdfCombinator(argv.filenames[0], argv.filenames[1], os.path.join(os.path.dirname(argv.filenames[0]),"out.pdf"))
         pdfCombinator.outputPdf()
     else: 
         MainWin()
